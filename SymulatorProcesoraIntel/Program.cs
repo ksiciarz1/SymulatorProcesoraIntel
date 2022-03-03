@@ -72,9 +72,7 @@ namespace SymulatorProcesoraIntel
                 string command = wholeString.Split(" ")[0];
                 command = command.ToLower();
                 if (wholeString.Split(" ").Length < 3)
-                {
                     continue;
-                }
                 string[] argumenty = new string[] { Convert.ToString(wholeString.Split(" ")[1]).ToUpper(), Convert.ToString(wholeString.Split(" ")[2]).ToUpper() };
                 switch (command)
                 {
@@ -84,9 +82,7 @@ namespace SymulatorProcesoraIntel
                             rejestry[argumenty[1]] = rejestry[argumenty[0]];
                         }
                         else
-                        {
                             Console.WriteLine("Podano zły argument");
-                        }
                         break;
                     case "xchg":
                         if (rejestry.ContainsKey(argumenty[0]) && rejestry.ContainsKey(argumenty[1]))
@@ -97,9 +93,7 @@ namespace SymulatorProcesoraIntel
                             rejestry[argumenty[1]] = temp;
                         }
                         else
-                        {
                             Console.WriteLine("Podano zły argument");
-                        }
                         break;
                     default:
                         Console.WriteLine("Nie znaleziona takiej komendy");
@@ -109,9 +103,7 @@ namespace SymulatorProcesoraIntel
                 Console.WriteLine("\n");
 
                 foreach (KeyValuePair<string, byte> kvp in rejestry) // wyświetlanie całego rejestru
-                {
                     Console.WriteLine($"Rejestr: {kvp.Key} = {Convert.ToString(kvp.Value, 2).PadLeft(8, '0')}");
-                }
             }
         }
     }
