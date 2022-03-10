@@ -61,9 +61,5 @@ namespace WersjaKonsolowa
         {
 
         }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }
