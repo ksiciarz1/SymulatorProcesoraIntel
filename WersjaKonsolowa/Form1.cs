@@ -15,6 +15,16 @@ namespace WersjaKonsolowa
         public Form1()
         {
             InitializeComponent();
+            textBoxArray = new System.Windows.Forms.TextBox[] { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7, textBox8 };
+            RandomizeMemoryCells();
+        }
+        public void RandomizeMemoryCells()
+        {
+            for (int i = 0; i < textBoxArray.Length; i++)
+            {
+                System.Random random = new System.Random();
+                textBoxArray[i].Text = System.Convert.ToString(random.Next(255), 2).PadLeft(8, '0');
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,6 +55,15 @@ namespace WersjaKonsolowa
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

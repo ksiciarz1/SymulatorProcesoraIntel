@@ -119,7 +119,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox8.Location = new System.Drawing.Point(103, 256);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(94, 23);
+            this.textBox8.Size = new System.Drawing.Size(79, 23);
             this.textBox8.TabIndex = 15;
             // 
             // label7
@@ -138,7 +138,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox7.Location = new System.Drawing.Point(103, 217);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(94, 23);
+            this.textBox7.Size = new System.Drawing.Size(79, 23);
             this.textBox7.TabIndex = 13;
             // 
             // label6
@@ -157,7 +157,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox6.Location = new System.Drawing.Point(103, 178);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(94, 23);
+            this.textBox6.Size = new System.Drawing.Size(79, 23);
             this.textBox6.TabIndex = 11;
             // 
             // label5
@@ -176,7 +176,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox5.Location = new System.Drawing.Point(103, 139);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(94, 23);
+            this.textBox5.Size = new System.Drawing.Size(79, 23);
             this.textBox5.TabIndex = 9;
             // 
             // label4
@@ -195,7 +195,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox4.Location = new System.Drawing.Point(103, 100);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(94, 23);
+            this.textBox4.Size = new System.Drawing.Size(79, 23);
             this.textBox4.TabIndex = 7;
             // 
             // label3
@@ -213,7 +213,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox3.Location = new System.Drawing.Point(103, 61);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(94, 23);
+            this.textBox3.Size = new System.Drawing.Size(79, 23);
             this.textBox3.TabIndex = 5;
             // 
             // label2
@@ -232,7 +232,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox2.Location = new System.Drawing.Point(103, 32);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(94, 23);
+            this.textBox2.Size = new System.Drawing.Size(79, 23);
             this.textBox2.TabIndex = 3;
             // 
             // label1
@@ -250,7 +250,7 @@ namespace WersjaKonsolowa
             // 
             this.textBox1.Location = new System.Drawing.Point(103, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 23);
+            this.textBox1.Size = new System.Drawing.Size(79, 23);
             this.textBox1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -309,6 +309,7 @@ namespace WersjaKonsolowa
             this.tableLayoutPanel1.SetRowSpan(this.checkedListBox1, 2);
             this.checkedListBox1.Size = new System.Drawing.Size(198, 418);
             this.checkedListBox1.TabIndex = 1;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -342,6 +343,7 @@ namespace WersjaKonsolowa
             this.button1.TabIndex = 1;
             this.button1.Text = "Symulacja";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // commandsListBox
             // 
@@ -374,6 +376,7 @@ namespace WersjaKonsolowa
 
         #endregion
 
+
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
@@ -399,6 +402,7 @@ namespace WersjaKonsolowa
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox[] textBoxArray;
     }
 }
 
