@@ -58,7 +58,7 @@ namespace WersjaKonsolowa
             this.MemoryRadioButton10 = new System.Windows.Forms.RadioButton();
             this.MemoryRadioButton9 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SimulateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MemoryRadioButton8 = new System.Windows.Forms.RadioButton();
             this.MemoryRadioButton7 = new System.Windows.Forms.RadioButton();
@@ -68,6 +68,9 @@ namespace WersjaKonsolowa
             this.MemoryRadioButton3 = new System.Windows.Forms.RadioButton();
             this.MemoryRadioButton2 = new System.Windows.Forms.RadioButton();
             this.MemoryRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.xchglRadioButton = new System.Windows.Forms.RadioButton();
+            this.movRadioButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -77,19 +80,16 @@ namespace WersjaKonsolowa
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.movRadioButton = new System.Windows.Forms.RadioButton();
-            this.xchglRadioButton = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -102,6 +102,7 @@ namespace WersjaKonsolowa
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
@@ -132,17 +133,16 @@ namespace WersjaKonsolowa
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 277);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(195, 277);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Location = new System.Drawing.Point(74, 249);
+            this.label8.Location = new System.Drawing.Point(72, 249);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 17);
+            this.label8.Size = new System.Drawing.Size(21, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "DL";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -150,7 +150,7 @@ namespace WersjaKonsolowa
             // textBox8
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox8.Location = new System.Drawing.Point(103, 246);
+            this.textBox8.Location = new System.Drawing.Point(99, 245);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(79, 23);
             this.textBox8.TabIndex = 15;
@@ -159,10 +159,9 @@ namespace WersjaKonsolowa
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(71, 211);
+            this.label7.Location = new System.Drawing.Point(69, 212);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 17);
+            this.label7.Size = new System.Drawing.Size(24, 15);
             this.label7.TabIndex = 12;
             this.label7.Text = "DH";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -170,7 +169,7 @@ namespace WersjaKonsolowa
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox7.Location = new System.Drawing.Point(103, 208);
+            this.textBox7.Location = new System.Drawing.Point(99, 208);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(79, 23);
             this.textBox7.TabIndex = 13;
@@ -179,10 +178,9 @@ namespace WersjaKonsolowa
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(74, 175);
+            this.label6.Location = new System.Drawing.Point(72, 176);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 17);
+            this.label6.Size = new System.Drawing.Size(21, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "CL";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -190,7 +188,7 @@ namespace WersjaKonsolowa
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox6.Location = new System.Drawing.Point(103, 172);
+            this.textBox6.Location = new System.Drawing.Point(99, 172);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(79, 23);
             this.textBox6.TabIndex = 11;
@@ -199,10 +197,9 @@ namespace WersjaKonsolowa
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(71, 139);
+            this.label5.Location = new System.Drawing.Point(69, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 17);
+            this.label5.Size = new System.Drawing.Size(24, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "CH";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -210,7 +207,7 @@ namespace WersjaKonsolowa
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox5.Location = new System.Drawing.Point(103, 136);
+            this.textBox5.Location = new System.Drawing.Point(99, 136);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(79, 23);
             this.textBox5.TabIndex = 9;
@@ -219,10 +216,9 @@ namespace WersjaKonsolowa
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(75, 103);
+            this.label4.Location = new System.Drawing.Point(73, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 17);
+            this.label4.Size = new System.Drawing.Size(20, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "BL";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -230,7 +226,7 @@ namespace WersjaKonsolowa
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Location = new System.Drawing.Point(103, 100);
+            this.textBox4.Location = new System.Drawing.Point(99, 100);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(79, 23);
             this.textBox4.TabIndex = 7;
@@ -239,17 +235,16 @@ namespace WersjaKonsolowa
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(72, 67);
+            this.label3.Location = new System.Drawing.Point(70, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 17);
+            this.label3.Size = new System.Drawing.Size(23, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "BH";
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(103, 64);
+            this.textBox3.Location = new System.Drawing.Point(99, 64);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(79, 23);
             this.textBox3.TabIndex = 5;
@@ -258,10 +253,9 @@ namespace WersjaKonsolowa
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Location = new System.Drawing.Point(74, 35);
+            this.label2.Location = new System.Drawing.Point(72, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 17);
+            this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "AL";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -269,7 +263,7 @@ namespace WersjaKonsolowa
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(103, 32);
+            this.textBox2.Location = new System.Drawing.Point(99, 32);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(79, 23);
             this.textBox2.TabIndex = 3;
@@ -278,17 +272,16 @@ namespace WersjaKonsolowa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(71, 6);
+            this.label1.Location = new System.Drawing.Point(69, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 17);
+            this.label1.Size = new System.Drawing.Size(24, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "AH";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(103, 3);
+            this.textBox1.Location = new System.Drawing.Point(99, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(79, 23);
             this.textBox1.TabIndex = 1;
@@ -317,6 +310,7 @@ namespace WersjaKonsolowa
             // 
             // tableLayoutPanel8
             // 
+            this.tableLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -347,7 +341,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton16.AutoSize = true;
-            this.MemoryRadioButton16.Location = new System.Drawing.Point(67, 346);
+            this.MemoryRadioButton16.Location = new System.Drawing.Point(66, 346);
             this.MemoryRadioButton16.Name = "MemoryRadioButton16";
             this.MemoryRadioButton16.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton16.TabIndex = 7;
@@ -359,7 +353,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton15.AutoSize = true;
-            this.MemoryRadioButton15.Location = new System.Drawing.Point(65, 297);
+            this.MemoryRadioButton15.Location = new System.Drawing.Point(64, 297);
             this.MemoryRadioButton15.Name = "MemoryRadioButton15";
             this.MemoryRadioButton15.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton15.TabIndex = 6;
@@ -371,7 +365,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton14.AutoSize = true;
-            this.MemoryRadioButton14.Location = new System.Drawing.Point(67, 248);
+            this.MemoryRadioButton14.Location = new System.Drawing.Point(66, 248);
             this.MemoryRadioButton14.Name = "MemoryRadioButton14";
             this.MemoryRadioButton14.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton14.TabIndex = 5;
@@ -383,7 +377,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton13.AutoSize = true;
-            this.MemoryRadioButton13.Location = new System.Drawing.Point(65, 199);
+            this.MemoryRadioButton13.Location = new System.Drawing.Point(64, 199);
             this.MemoryRadioButton13.Name = "MemoryRadioButton13";
             this.MemoryRadioButton13.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton13.TabIndex = 4;
@@ -395,7 +389,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton12.AutoSize = true;
-            this.MemoryRadioButton12.Location = new System.Drawing.Point(67, 150);
+            this.MemoryRadioButton12.Location = new System.Drawing.Point(66, 150);
             this.MemoryRadioButton12.Name = "MemoryRadioButton12";
             this.MemoryRadioButton12.Size = new System.Drawing.Size(38, 19);
             this.MemoryRadioButton12.TabIndex = 3;
@@ -407,7 +401,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton11.AutoSize = true;
-            this.MemoryRadioButton11.Location = new System.Drawing.Point(66, 101);
+            this.MemoryRadioButton11.Location = new System.Drawing.Point(65, 101);
             this.MemoryRadioButton11.Name = "MemoryRadioButton11";
             this.MemoryRadioButton11.Size = new System.Drawing.Size(41, 19);
             this.MemoryRadioButton11.TabIndex = 2;
@@ -419,7 +413,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton10.AutoSize = true;
-            this.MemoryRadioButton10.Location = new System.Drawing.Point(67, 52);
+            this.MemoryRadioButton10.Location = new System.Drawing.Point(66, 52);
             this.MemoryRadioButton10.Name = "MemoryRadioButton10";
             this.MemoryRadioButton10.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton10.TabIndex = 1;
@@ -431,7 +425,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton9.AutoSize = true;
-            this.MemoryRadioButton9.Location = new System.Drawing.Point(65, 3);
+            this.MemoryRadioButton9.Location = new System.Drawing.Point(64, 3);
             this.MemoryRadioButton9.Name = "MemoryRadioButton9";
             this.MemoryRadioButton9.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton9.TabIndex = 0;
@@ -443,7 +437,7 @@ namespace WersjaKonsolowa
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.SimulateButton, 0, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(590, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -454,18 +448,19 @@ namespace WersjaKonsolowa
             this.tableLayoutPanel2.Size = new System.Drawing.Size(183, 399);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // button1
+            // SimulateButton
             // 
-            this.button1.Location = new System.Drawing.Point(3, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Symulacja";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SimulateButton.Location = new System.Drawing.Point(3, 363);
+            this.SimulateButton.Name = "SimulateButton";
+            this.SimulateButton.Size = new System.Drawing.Size(177, 33);
+            this.SimulateButton.TabIndex = 1;
+            this.SimulateButton.Text = "Symuluj";
+            this.SimulateButton.UseVisualStyleBackColor = true;
+            this.SimulateButton.Click += new System.EventHandler(this.SimulationButtonClick);
             // 
             // tableLayoutPanel4
             // 
+            this.tableLayoutPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -496,7 +491,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton8.AutoSize = true;
-            this.MemoryRadioButton8.Location = new System.Drawing.Point(79, 346);
+            this.MemoryRadioButton8.Location = new System.Drawing.Point(78, 346);
             this.MemoryRadioButton8.Name = "MemoryRadioButton8";
             this.MemoryRadioButton8.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton8.TabIndex = 7;
@@ -508,7 +503,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton7.AutoSize = true;
-            this.MemoryRadioButton7.Location = new System.Drawing.Point(78, 297);
+            this.MemoryRadioButton7.Location = new System.Drawing.Point(77, 297);
             this.MemoryRadioButton7.Name = "MemoryRadioButton7";
             this.MemoryRadioButton7.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton7.TabIndex = 6;
@@ -520,7 +515,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton6.AutoSize = true;
-            this.MemoryRadioButton6.Location = new System.Drawing.Point(79, 248);
+            this.MemoryRadioButton6.Location = new System.Drawing.Point(78, 248);
             this.MemoryRadioButton6.Name = "MemoryRadioButton6";
             this.MemoryRadioButton6.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton6.TabIndex = 5;
@@ -532,7 +527,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton5.AutoSize = true;
-            this.MemoryRadioButton5.Location = new System.Drawing.Point(78, 199);
+            this.MemoryRadioButton5.Location = new System.Drawing.Point(77, 199);
             this.MemoryRadioButton5.Name = "MemoryRadioButton5";
             this.MemoryRadioButton5.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton5.TabIndex = 4;
@@ -544,7 +539,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton4.AutoSize = true;
-            this.MemoryRadioButton4.Location = new System.Drawing.Point(80, 150);
+            this.MemoryRadioButton4.Location = new System.Drawing.Point(79, 150);
             this.MemoryRadioButton4.Name = "MemoryRadioButton4";
             this.MemoryRadioButton4.Size = new System.Drawing.Size(38, 19);
             this.MemoryRadioButton4.TabIndex = 3;
@@ -556,7 +551,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton3.AutoSize = true;
-            this.MemoryRadioButton3.Location = new System.Drawing.Point(78, 101);
+            this.MemoryRadioButton3.Location = new System.Drawing.Point(77, 101);
             this.MemoryRadioButton3.Name = "MemoryRadioButton3";
             this.MemoryRadioButton3.Size = new System.Drawing.Size(41, 19);
             this.MemoryRadioButton3.TabIndex = 2;
@@ -568,7 +563,7 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton2.AutoSize = true;
-            this.MemoryRadioButton2.Location = new System.Drawing.Point(79, 52);
+            this.MemoryRadioButton2.Location = new System.Drawing.Point(78, 52);
             this.MemoryRadioButton2.Name = "MemoryRadioButton2";
             this.MemoryRadioButton2.Size = new System.Drawing.Size(39, 19);
             this.MemoryRadioButton2.TabIndex = 1;
@@ -580,13 +575,52 @@ namespace WersjaKonsolowa
             // 
             this.MemoryRadioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MemoryRadioButton1.AutoSize = true;
-            this.MemoryRadioButton1.Location = new System.Drawing.Point(78, 3);
+            this.MemoryRadioButton1.Location = new System.Drawing.Point(77, 3);
             this.MemoryRadioButton1.Name = "MemoryRadioButton1";
             this.MemoryRadioButton1.Size = new System.Drawing.Size(42, 19);
             this.MemoryRadioButton1.TabIndex = 0;
             this.MemoryRadioButton1.TabStop = true;
             this.MemoryRadioButton1.Text = "AH";
             this.MemoryRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.Controls.Add(this.xchglRadioButton, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.movRadioButton, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 304);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(198, 73);
+            this.tableLayoutPanel9.TabIndex = 7;
+            // 
+            // xchglRadioButton
+            // 
+            this.xchglRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.xchglRadioButton.AutoSize = true;
+            this.xchglRadioButton.Location = new System.Drawing.Point(70, 51);
+            this.xchglRadioButton.Name = "xchglRadioButton";
+            this.xchglRadioButton.Size = new System.Drawing.Size(57, 19);
+            this.xchglRadioButton.TabIndex = 1;
+            this.xchglRadioButton.TabStop = true;
+            this.xchglRadioButton.Text = "xchgl ";
+            this.xchglRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // movRadioButton
+            // 
+            this.movRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.movRadioButton.AutoSize = true;
+            this.movRadioButton.Location = new System.Drawing.Point(74, 14);
+            this.movRadioButton.Name = "movRadioButton";
+            this.movRadioButton.Size = new System.Drawing.Size(49, 19);
+            this.movRadioButton.TabIndex = 0;
+            this.movRadioButton.TabStop = true;
+            this.movRadioButton.Text = "mov";
+            this.movRadioButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -714,45 +748,6 @@ namespace WersjaKonsolowa
             this.radioButton14.Text = "radioButton14";
             this.radioButton14.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.xchglRadioButton, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.movRadioButton, 0, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 304);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(198, 119);
-            this.tableLayoutPanel9.TabIndex = 7;
-            // 
-            // movRadioButton
-            // 
-            this.movRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.movRadioButton.AutoSize = true;
-            this.movRadioButton.Location = new System.Drawing.Point(74, 37);
-            this.movRadioButton.Name = "movRadioButton";
-            this.movRadioButton.Size = new System.Drawing.Size(49, 19);
-            this.movRadioButton.TabIndex = 0;
-            this.movRadioButton.TabStop = true;
-            this.movRadioButton.Text = "mov";
-            this.movRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // xchglRadioButton
-            // 
-            this.xchglRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.xchglRadioButton.AutoSize = true;
-            this.xchglRadioButton.Location = new System.Drawing.Point(70, 97);
-            this.xchglRadioButton.Name = "xchglRadioButton";
-            this.xchglRadioButton.Size = new System.Drawing.Size(57, 19);
-            this.xchglRadioButton.TabIndex = 1;
-            this.xchglRadioButton.TabStop = true;
-            this.xchglRadioButton.Text = "xchgl ";
-            this.xchglRadioButton.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -770,14 +765,14 @@ namespace WersjaKonsolowa
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -788,7 +783,7 @@ namespace WersjaKonsolowa
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SimulateButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox8;
@@ -837,6 +832,8 @@ namespace WersjaKonsolowa
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.RadioButton xchglRadioButton;
         private System.Windows.Forms.RadioButton movRadioButton;
+        private System.Windows.Forms.RadioButton[] radioButtonArray1;
+        private System.Windows.Forms.RadioButton[] radioButtonArray2;
     }
 }
 
