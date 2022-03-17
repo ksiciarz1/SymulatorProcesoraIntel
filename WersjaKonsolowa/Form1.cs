@@ -65,6 +65,12 @@ namespace WersjaOkienkowa
             {
                 return;
             }
+            // TODO:
+            // INC - IKREMENTUJ DONE
+            // DEC - DEKREMENTUJ DONE
+            // NOT - NEGACJA zamienia 1 na 0 i 0 na 1 DONE
+            // NEG - UZUPEŁNIENIE DO 2 NEGACJIA I IKREMENTACJA DONE
+            // ZROBIĆ SPRAWOZDANIE PDF
             switch (radioChecks[0])
             {
                 case 0:
@@ -75,35 +81,44 @@ namespace WersjaOkienkowa
                     formManager.SetTextBoxText(formManager.ReturnTextBoxText(radioChecks[2]), radioChecks[1]);
                     formManager.SetTextBoxText(temp, radioChecks[2]);
                     break;
+                case 2:
+                    int value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    value++;
+                    if (value > 255)
+                    {
+                        value = 0;
+                    }
+                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    break;
+                case 3:
+                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    value--;
+                    if (value < 0)
+                    {
+                        value = 255;
+                    }
+                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    break;
+                case 4:
+                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    value = Math.Abs(value - 255);
+                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    break;
+                case 5:
+                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    value = Math.Abs(value - 255);
+                    value++;
+                    if (value > 255)
+                    {
+                        value = 0;
+                    }
+                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    break;
+
                 default:
                     break;
             }
 
         }
-
-        //private int WitchRadioButtonIsChecked(int arrayNumber)
-        //{
-        //    if (arrayNumber == 0)
-        //    {
-        //        for (int i = 0; i < radioButtonArray1.Length; i++)
-        //        {
-        //            if (radioButtonArray1[i].Checked)
-        //            {
-        //                return i;
-        //            }
-        //        }
-        //    }
-        //    else
-        //    {
-        //        for (int i = 0; i < radioButtonArray2.Length; i++)
-        //        {
-        //            if (radioButtonArray2[i].Checked)
-        //            {
-        //                return i;
-        //            }
-        //        }
-        //    }
-        //    return -1;
-        //}
     }
 }
