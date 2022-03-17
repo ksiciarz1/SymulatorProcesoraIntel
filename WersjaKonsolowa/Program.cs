@@ -14,9 +14,6 @@ namespace WersjaOkienkowa
     // ZROBIÆ SPRAWOZDANIE PDF
     static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -25,7 +22,6 @@ namespace WersjaOkienkowa
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 mainForm = new Form1();
             Application.Run(mainForm);
-            FormManager formManager = new FormManager(mainForm);
         }
     }
 }

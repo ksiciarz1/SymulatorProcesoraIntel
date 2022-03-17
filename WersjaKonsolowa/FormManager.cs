@@ -48,7 +48,12 @@ namespace WersjaOkienkowa
 
         public void SetTextBoxText(string text, int textBoxIndex)
         {
-            registryTextBoxes[textBoxIndex].Text = text;
+            registryTextBoxes[textBoxIndex].Text = text.PadLeft(8, '0');
+        }
+
+        public string ReturnTextBoxText(int id)
+        {
+            return registryTextBoxes[id].Text;
         }
 
         public int[] RetrunCheckedRadioIndexes()
