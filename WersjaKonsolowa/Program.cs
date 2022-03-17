@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WersjaKonsolowa
+namespace WersjaOkienkowa
 {
     // TODO:
     // INC - IKREMENTUJ 
@@ -25,6 +25,7 @@ namespace WersjaKonsolowa
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 mainForm = new Form1();
             Application.Run(mainForm);
+            FormManager formManager = new FormManager(mainForm);
         }
     }
 }

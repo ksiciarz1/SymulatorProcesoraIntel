@@ -1,5 +1,5 @@
 ﻿
-namespace WersjaKonsolowa
+namespace WersjaOkienkowa
 {
     partial class Form1
     {
@@ -786,31 +786,15 @@ namespace WersjaKonsolowa
         private System.Windows.Forms.Button SimulateButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox[] textBoxArray;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.RadioButton MemoryRadioButton8;
-        private System.Windows.Forms.RadioButton MemoryRadioButton7;
-        private System.Windows.Forms.RadioButton MemoryRadioButton6;
-        private System.Windows.Forms.RadioButton MemoryRadioButton5;
-        private System.Windows.Forms.RadioButton MemoryRadioButton4;
-        private System.Windows.Forms.RadioButton MemoryRadioButton3;
-        private System.Windows.Forms.RadioButton MemoryRadioButton2;
-        private System.Windows.Forms.RadioButton MemoryRadioButton1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
@@ -821,19 +805,35 @@ namespace WersjaKonsolowa
         private System.Windows.Forms.RadioButton radioButton13;
         private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.RadioButton MemoryRadioButton16;
-        private System.Windows.Forms.RadioButton MemoryRadioButton15;
-        private System.Windows.Forms.RadioButton MemoryRadioButton14;
-        private System.Windows.Forms.RadioButton MemoryRadioButton13;
-        private System.Windows.Forms.RadioButton MemoryRadioButton12;
-        private System.Windows.Forms.RadioButton MemoryRadioButton11;
-        private System.Windows.Forms.RadioButton MemoryRadioButton10;
-        private System.Windows.Forms.RadioButton MemoryRadioButton9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.RadioButton xchglRadioButton;
-        private System.Windows.Forms.RadioButton movRadioButton;
         private System.Windows.Forms.RadioButton[] radioButtonArray1;
         private System.Windows.Forms.RadioButton[] radioButtonArray2;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.RadioButton MemoryRadioButton8;
+        public System.Windows.Forms.RadioButton MemoryRadioButton7;
+        public System.Windows.Forms.RadioButton MemoryRadioButton6;
+        public System.Windows.Forms.RadioButton MemoryRadioButton5;
+        public System.Windows.Forms.RadioButton MemoryRadioButton4;
+        public System.Windows.Forms.RadioButton MemoryRadioButton3;
+        public System.Windows.Forms.RadioButton MemoryRadioButton2;
+        public System.Windows.Forms.RadioButton MemoryRadioButton1;
+        public System.Windows.Forms.RadioButton MemoryRadioButton16;
+        public System.Windows.Forms.RadioButton MemoryRadioButton15;
+        public System.Windows.Forms.RadioButton MemoryRadioButton14;
+        public System.Windows.Forms.RadioButton MemoryRadioButton13;
+        public System.Windows.Forms.RadioButton MemoryRadioButton12;
+        public System.Windows.Forms.RadioButton MemoryRadioButton11;
+        public System.Windows.Forms.RadioButton MemoryRadioButton10;
+        public System.Windows.Forms.RadioButton MemoryRadioButton9;
+        public System.Windows.Forms.RadioButton xchglRadioButton;
+        public System.Windows.Forms.RadioButton movRadioButton;
     }
 }
 
