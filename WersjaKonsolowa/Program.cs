@@ -6,6 +6,12 @@ using System.Windows.Forms;
 
 namespace WersjaKonsolowa
 {
+    // TODO:
+    // INC - IKREMENTUJ 
+    // DEC - DEKREMENTUJ
+    // NOT - NEGACJA zamienia 1 na 0 i 0 na 1
+    // NEG - UZUPE£NIENIE DO 2 NEGACJIA I IKREMENTACJA
+    // ZROBIÆ SPRAWOZDANIE PDF
     static class Program
     {
         /// <summary>
