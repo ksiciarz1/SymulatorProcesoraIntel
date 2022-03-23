@@ -9,7 +9,7 @@ namespace WersjaOkienkowa
         TextBox[] registryTextBoxes = new TextBox[8];
         RadioButton[] registryRadioButtonesFirst = new RadioButton[8];
         RadioButton[] registryRadioButtonesSecond = new RadioButton[8];
-        RadioButton[] commandsRadioButtons = new RadioButton[2];
+        RadioButton[] commandsRadioButtons = new RadioButton[6];
 
         public FormManager(Form1 mainForm)
         {
@@ -17,6 +17,10 @@ namespace WersjaOkienkowa
 
             commandsRadioButtons[0] = mainForm.movRadioButton;
             commandsRadioButtons[1] = mainForm.xchglRadioButton;
+            commandsRadioButtons[2] = mainForm.incRadioButton;
+            commandsRadioButtons[3] = mainForm.decRadioButton;
+            commandsRadioButtons[4] = mainForm.notRadioButton;
+            commandsRadioButtons[5] = mainForm.negRadioButton;
 
             registryTextBoxes[0] = mainForm.textBox1;
             registryTextBoxes[1] = mainForm.textBox2;

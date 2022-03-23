@@ -80,6 +80,10 @@ namespace WersjaOkienkowa
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.incRadioButton = new System.Windows.Forms.RadioButton();
+            this.notRadioButton = new System.Windows.Forms.RadioButton();
+            this.decRadioButton = new System.Windows.Forms.RadioButton();
+            this.negRadioButton = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -145,7 +149,6 @@ namespace WersjaOkienkowa
             this.label8.Size = new System.Drawing.Size(21, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "DL";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // textBox8
             // 
@@ -164,7 +167,6 @@ namespace WersjaOkienkowa
             this.label7.Size = new System.Drawing.Size(24, 15);
             this.label7.TabIndex = 12;
             this.label7.Text = "DH";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // textBox7
             // 
@@ -183,7 +185,6 @@ namespace WersjaOkienkowa
             this.label6.Size = new System.Drawing.Size(21, 15);
             this.label6.TabIndex = 10;
             this.label6.Text = "CL";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox6
             // 
@@ -202,7 +203,6 @@ namespace WersjaOkienkowa
             this.label5.Size = new System.Drawing.Size(24, 15);
             this.label5.TabIndex = 8;
             this.label5.Text = "CH";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox5
             // 
@@ -221,7 +221,6 @@ namespace WersjaOkienkowa
             this.label4.Size = new System.Drawing.Size(20, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "BL";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox4
             // 
@@ -258,7 +257,6 @@ namespace WersjaOkienkowa
             this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "AL";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox2
             // 
@@ -585,24 +583,29 @@ namespace WersjaOkienkowa
             // 
             // tableLayoutPanel9
             // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.negRadioButton, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.decRadioButton, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.notRadioButton, 1, 1);
+            this.tableLayoutPanel9.Controls.Add(this.incRadioButton, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.xchglRadioButton, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.movRadioButton, 0, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 304);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(198, 73);
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(198, 119);
             this.tableLayoutPanel9.TabIndex = 7;
             // 
             // xchglRadioButton
             // 
             this.xchglRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.xchglRadioButton.AutoSize = true;
-            this.xchglRadioButton.Location = new System.Drawing.Point(70, 51);
+            this.xchglRadioButton.Location = new System.Drawing.Point(21, 56);
             this.xchglRadioButton.Name = "xchglRadioButton";
             this.xchglRadioButton.Size = new System.Drawing.Size(57, 19);
             this.xchglRadioButton.TabIndex = 1;
@@ -614,7 +617,7 @@ namespace WersjaOkienkowa
             // 
             this.movRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.movRadioButton.AutoSize = true;
-            this.movRadioButton.Location = new System.Drawing.Point(74, 14);
+            this.movRadioButton.Location = new System.Drawing.Point(25, 17);
             this.movRadioButton.Name = "movRadioButton";
             this.movRadioButton.Size = new System.Drawing.Size(49, 19);
             this.movRadioButton.TabIndex = 0;
@@ -748,6 +751,54 @@ namespace WersjaOkienkowa
             this.radioButton14.Text = "radioButton14";
             this.radioButton14.UseVisualStyleBackColor = true;
             // 
+            // incRadioButton
+            // 
+            this.incRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.incRadioButton.AutoSize = true;
+            this.incRadioButton.Location = new System.Drawing.Point(128, 17);
+            this.incRadioButton.Name = "incRadioButton";
+            this.incRadioButton.Size = new System.Drawing.Size(41, 19);
+            this.incRadioButton.TabIndex = 2;
+            this.incRadioButton.TabStop = true;
+            this.incRadioButton.Text = "inc";
+            this.incRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // notRadioButton
+            // 
+            this.notRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.notRadioButton.AutoSize = true;
+            this.notRadioButton.Location = new System.Drawing.Point(127, 56);
+            this.notRadioButton.Name = "notRadioButton";
+            this.notRadioButton.Size = new System.Drawing.Size(43, 19);
+            this.notRadioButton.TabIndex = 3;
+            this.notRadioButton.TabStop = true;
+            this.notRadioButton.Text = "not";
+            this.notRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // decRadioButton
+            // 
+            this.decRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.decRadioButton.AutoSize = true;
+            this.decRadioButton.Location = new System.Drawing.Point(27, 97);
+            this.decRadioButton.Name = "decRadioButton";
+            this.decRadioButton.Size = new System.Drawing.Size(44, 19);
+            this.decRadioButton.TabIndex = 4;
+            this.decRadioButton.TabStop = true;
+            this.decRadioButton.Text = "dec";
+            this.decRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // negRadioButton
+            // 
+            this.negRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.negRadioButton.AutoSize = true;
+            this.negRadioButton.Location = new System.Drawing.Point(126, 97);
+            this.negRadioButton.Name = "negRadioButton";
+            this.negRadioButton.Size = new System.Drawing.Size(45, 19);
+            this.negRadioButton.TabIndex = 5;
+            this.negRadioButton.TabStop = true;
+            this.negRadioButton.Text = "neg";
+            this.negRadioButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -793,7 +844,6 @@ namespace WersjaOkienkowa
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox[] textBoxArray;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.RadioButton radioButton9;
@@ -806,8 +856,6 @@ namespace WersjaOkienkowa
         private System.Windows.Forms.RadioButton radioButton14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.RadioButton[] radioButtonArray1;
-        private System.Windows.Forms.RadioButton[] radioButtonArray2;
         public System.Windows.Forms.TextBox textBox8;
         public System.Windows.Forms.TextBox textBox7;
         public System.Windows.Forms.TextBox textBox6;
@@ -834,6 +882,10 @@ namespace WersjaOkienkowa
         public System.Windows.Forms.RadioButton MemoryRadioButton9;
         public System.Windows.Forms.RadioButton xchglRadioButton;
         public System.Windows.Forms.RadioButton movRadioButton;
+        public System.Windows.Forms.RadioButton negRadioButton;
+        public System.Windows.Forms.RadioButton decRadioButton;
+        public System.Windows.Forms.RadioButton notRadioButton;
+        public System.Windows.Forms.RadioButton incRadioButton;
     }
 }
 
