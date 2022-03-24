@@ -15,6 +15,7 @@ namespace WersjaOkienkowa
         {
             this.mainForm = mainForm;
 
+            #region form variables
             commandsRadioButtons[0] = mainForm.movRadioButton;
             commandsRadioButtons[1] = mainForm.xchglRadioButton;
             commandsRadioButtons[2] = mainForm.incRadioButton;
@@ -48,6 +49,7 @@ namespace WersjaOkienkowa
             registryRadioButtonesSecond[5] = mainForm.MemoryRadioButton14;
             registryRadioButtonesSecond[6] = mainForm.MemoryRadioButton15;
             registryRadioButtonesSecond[7] = mainForm.MemoryRadioButton16;
+            #endregion
         }
 
         public void SetTextBoxText(string text, int textBoxIndex)

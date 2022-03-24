@@ -830,7 +830,7 @@ namespace WersjaOkienkowa
 
         #endregion
 
-
+        #region form variables
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -886,6 +886,7 @@ namespace WersjaOkienkowa
         public System.Windows.Forms.RadioButton decRadioButton;
         public System.Windows.Forms.RadioButton notRadioButton;
         public System.Windows.Forms.RadioButton incRadioButton;
+        #endregion
     }
 }
 
