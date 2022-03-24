@@ -13,6 +13,7 @@ namespace WersjaOkienkowa
     // ADD
     // SUB
     // NEG - UZUPE£NIENIE DO 2 NEGACJIA I IKREMENTACJA ?
+    // KONWERSJA NA/Z 16-WEGO
     // ZROBIÆ SPRAWOZDANIE PDF
     static class Program
     {

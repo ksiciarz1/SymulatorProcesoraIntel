@@ -36,11 +36,15 @@ namespace WersjaOkienkowa
                 return;
             }
             // TODO:
-            // INC - IKREMENTUJ DONE
-            // DEC - DEKREMENTUJ DONE
-            // NOT - NEGACJA zamienia 1 na 0 i 0 na 1 DONE
-            // NEG - UZUPEŁNIENIE DO 2 NEGACJIA I IKREMENTACJA DONE
+            // AND
+            // OR
+            // XOR
+            // ADD
+            // SUB
+            // NEG - UZUPEŁNIENIE DO 2 NEGACJIA I IKREMENTACJA ?
+            // KONWERSJA NA/Z 16-WEGO
             // ZROBIĆ SPRAWOZDANIE PDF
+
             switch (radioChecks[0])
             {
                 case 0:
@@ -77,12 +81,55 @@ namespace WersjaOkienkowa
                 case 5:
                     value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
                     value = Math.Abs(value - 255);
-                    value++;
+                    if (value % 2 != 0)
+                    {
+                        value++;
+                    }
                     if (value > 255)
                     {
                         value = 0;
                     }
                     formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    break;
+                case 6:
+                    //AND
+                    byte byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    byte byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                    formManager.SetTextBoxText(Convert.ToString(byteValue1 & byteValue2, 2), radioChecks[1]);
+                    break;
+                case 7:
+                    //OR
+                    byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                    formManager.SetTextBoxText(Convert.ToString(byteValue1 | byteValue2, 2), radioChecks[1]);
+                    break;
+                case 8:
+                    //XOR
+                    byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                    formManager.SetTextBoxText(Convert.ToString(byteValue1 ^ byteValue2, 2), radioChecks[1]);
+                    break;
+                case 9:
+                    //ADD
+                    int value1 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    int value2 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                    int valueToSet = value1 + value2;
+                    if (valueToSet > 255)
+                    {
+                        valueToSet -= 255;
+                    }
+                    formManager.SetTextBoxText(Convert.ToString(valueToSet, 2), radioChecks[1]);
+                    break;
+                case 10:
+                    //SUB
+                    value1 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                    value2 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                    valueToSet = value1 - value2;
+                    if (valueToSet < 0)
+                    {
+                        valueToSet += 255;
+                    }
+                    formManager.SetTextBoxText(Convert.ToString(valueToSet, 2), radioChecks[1]);
                     break;
 
                 default:
