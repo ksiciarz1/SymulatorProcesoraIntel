@@ -69,8 +69,17 @@ namespace WersjaOkienkowa
             this.MemoryRadioButton2 = new System.Windows.Forms.RadioButton();
             this.MemoryRadioButton1 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.negRadioButton = new System.Windows.Forms.RadioButton();
+            this.decRadioButton = new System.Windows.Forms.RadioButton();
+            this.notRadioButton = new System.Windows.Forms.RadioButton();
+            this.incRadioButton = new System.Windows.Forms.RadioButton();
             this.xchglRadioButton = new System.Windows.Forms.RadioButton();
             this.movRadioButton = new System.Windows.Forms.RadioButton();
+            this.xorRadioButton = new System.Windows.Forms.RadioButton();
+            this.addRadioButton = new System.Windows.Forms.RadioButton();
+            this.subRadioButton = new System.Windows.Forms.RadioButton();
+            this.andRadioButton = new System.Windows.Forms.RadioButton();
+            this.orRadioButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
@@ -80,10 +89,14 @@ namespace WersjaOkienkowa
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
-            this.incRadioButton = new System.Windows.Forms.RadioButton();
-            this.notRadioButton = new System.Windows.Forms.RadioButton();
-            this.decRadioButton = new System.Windows.Forms.RadioButton();
-            this.negRadioButton = new System.Windows.Forms.RadioButton();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -107,11 +120,19 @@ namespace WersjaOkienkowa
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12F));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel3.Controls.Add(this.textBox9, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox10, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.textBox11, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.textBox12, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.textBox13, 2, 4);
+            this.tableLayoutPanel3.Controls.Add(this.textBox14, 2, 5);
+            this.tableLayoutPanel3.Controls.Add(this.textBox15, 2, 6);
+            this.tableLayoutPanel3.Controls.Add(this.textBox16, 2, 7);
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.textBox8, 0, 7);
             this.tableLayoutPanel3.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel3.Controls.Add(this.textBox7, 0, 6);
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 5);
@@ -119,24 +140,25 @@ namespace WersjaOkienkowa
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.textBox5, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.textBox3, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBox2, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.textBox4, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.textBox8, 1, 7);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 8;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(195, 277);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -144,7 +166,7 @@ namespace WersjaOkienkowa
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 249);
+            this.label8.Location = new System.Drawing.Point(40, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 15);
             this.label8.TabIndex = 14;
@@ -153,16 +175,16 @@ namespace WersjaOkienkowa
             // textBox8
             // 
             this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox8.Location = new System.Drawing.Point(99, 245);
+            this.textBox8.Location = new System.Drawing.Point(67, 245);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(79, 23);
+            this.textBox8.Size = new System.Drawing.Size(58, 23);
             this.textBox8.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(69, 212);
+            this.label7.Location = new System.Drawing.Point(37, 212);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 15);
             this.label7.TabIndex = 12;
@@ -171,16 +193,16 @@ namespace WersjaOkienkowa
             // textBox7
             // 
             this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox7.Location = new System.Drawing.Point(99, 208);
+            this.textBox7.Location = new System.Drawing.Point(67, 208);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(79, 23);
+            this.textBox7.Size = new System.Drawing.Size(58, 23);
             this.textBox7.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 176);
+            this.label6.Location = new System.Drawing.Point(40, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 15);
             this.label6.TabIndex = 10;
@@ -189,16 +211,16 @@ namespace WersjaOkienkowa
             // textBox6
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox6.Location = new System.Drawing.Point(99, 172);
+            this.textBox6.Location = new System.Drawing.Point(67, 172);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(79, 23);
+            this.textBox6.Size = new System.Drawing.Size(58, 23);
             this.textBox6.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 140);
+            this.label5.Location = new System.Drawing.Point(37, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 15);
             this.label5.TabIndex = 8;
@@ -207,16 +229,16 @@ namespace WersjaOkienkowa
             // textBox5
             // 
             this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox5.Location = new System.Drawing.Point(99, 136);
+            this.textBox5.Location = new System.Drawing.Point(67, 136);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(79, 23);
+            this.textBox5.Size = new System.Drawing.Size(58, 23);
             this.textBox5.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 104);
+            this.label4.Location = new System.Drawing.Point(41, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 15);
             this.label4.TabIndex = 6;
@@ -225,16 +247,16 @@ namespace WersjaOkienkowa
             // textBox4
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Location = new System.Drawing.Point(99, 100);
+            this.textBox4.Location = new System.Drawing.Point(67, 100);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 23);
+            this.textBox4.Size = new System.Drawing.Size(58, 23);
             this.textBox4.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 68);
+            this.label3.Location = new System.Drawing.Point(38, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 15);
             this.label3.TabIndex = 4;
@@ -243,16 +265,16 @@ namespace WersjaOkienkowa
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(99, 64);
+            this.textBox3.Location = new System.Drawing.Point(67, 64);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(79, 23);
+            this.textBox3.Size = new System.Drawing.Size(58, 23);
             this.textBox3.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 36);
+            this.label2.Location = new System.Drawing.Point(40, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 15);
             this.label2.TabIndex = 2;
@@ -261,16 +283,16 @@ namespace WersjaOkienkowa
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(99, 32);
+            this.textBox2.Location = new System.Drawing.Point(67, 32);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(79, 23);
+            this.textBox2.Size = new System.Drawing.Size(58, 23);
             this.textBox2.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 7);
+            this.label1.Location = new System.Drawing.Point(37, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 15);
             this.label1.TabIndex = 0;
@@ -279,9 +301,9 @@ namespace WersjaOkienkowa
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(99, 3);
+            this.textBox1.Location = new System.Drawing.Point(67, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 23);
+            this.textBox1.Size = new System.Drawing.Size(58, 23);
             this.textBox1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -583,29 +605,85 @@ namespace WersjaOkienkowa
             // 
             // tableLayoutPanel9
             // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel9.Controls.Add(this.negRadioButton, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.decRadioButton, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.notRadioButton, 1, 1);
             this.tableLayoutPanel9.Controls.Add(this.incRadioButton, 1, 0);
             this.tableLayoutPanel9.Controls.Add(this.xchglRadioButton, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.movRadioButton, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.xorRadioButton, 2, 0);
+            this.tableLayoutPanel9.Controls.Add(this.addRadioButton, 2, 1);
+            this.tableLayoutPanel9.Controls.Add(this.subRadioButton, 2, 2);
+            this.tableLayoutPanel9.Controls.Add(this.andRadioButton, 0, 3);
+            this.tableLayoutPanel9.Controls.Add(this.orRadioButton, 1, 3);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 304);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 3;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.RowCount = 4;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00062F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.00063F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(198, 119);
             this.tableLayoutPanel9.TabIndex = 7;
+            // 
+            // negRadioButton
+            // 
+            this.negRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.negRadioButton.AutoSize = true;
+            this.negRadioButton.Location = new System.Drawing.Point(75, 65);
+            this.negRadioButton.Name = "negRadioButton";
+            this.negRadioButton.Size = new System.Drawing.Size(45, 19);
+            this.negRadioButton.TabIndex = 5;
+            this.negRadioButton.TabStop = true;
+            this.negRadioButton.Text = "neg";
+            this.negRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // decRadioButton
+            // 
+            this.decRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.decRadioButton.AutoSize = true;
+            this.decRadioButton.Location = new System.Drawing.Point(10, 65);
+            this.decRadioButton.Name = "decRadioButton";
+            this.decRadioButton.Size = new System.Drawing.Size(44, 19);
+            this.decRadioButton.TabIndex = 4;
+            this.decRadioButton.TabStop = true;
+            this.decRadioButton.Text = "dec";
+            this.decRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // notRadioButton
+            // 
+            this.notRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.notRadioButton.AutoSize = true;
+            this.notRadioButton.Location = new System.Drawing.Point(76, 36);
+            this.notRadioButton.Name = "notRadioButton";
+            this.notRadioButton.Size = new System.Drawing.Size(43, 19);
+            this.notRadioButton.TabIndex = 3;
+            this.notRadioButton.TabStop = true;
+            this.notRadioButton.Text = "not";
+            this.notRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // incRadioButton
+            // 
+            this.incRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.incRadioButton.AutoSize = true;
+            this.incRadioButton.Location = new System.Drawing.Point(77, 7);
+            this.incRadioButton.Name = "incRadioButton";
+            this.incRadioButton.Size = new System.Drawing.Size(41, 19);
+            this.incRadioButton.TabIndex = 2;
+            this.incRadioButton.TabStop = true;
+            this.incRadioButton.Text = "inc";
+            this.incRadioButton.UseVisualStyleBackColor = true;
             // 
             // xchglRadioButton
             // 
             this.xchglRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.xchglRadioButton.AutoSize = true;
-            this.xchglRadioButton.Location = new System.Drawing.Point(21, 56);
+            this.xchglRadioButton.Location = new System.Drawing.Point(4, 36);
             this.xchglRadioButton.Name = "xchglRadioButton";
             this.xchglRadioButton.Size = new System.Drawing.Size(57, 19);
             this.xchglRadioButton.TabIndex = 1;
@@ -617,13 +695,73 @@ namespace WersjaOkienkowa
             // 
             this.movRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.movRadioButton.AutoSize = true;
-            this.movRadioButton.Location = new System.Drawing.Point(25, 17);
+            this.movRadioButton.Location = new System.Drawing.Point(8, 7);
             this.movRadioButton.Name = "movRadioButton";
             this.movRadioButton.Size = new System.Drawing.Size(49, 19);
             this.movRadioButton.TabIndex = 0;
             this.movRadioButton.TabStop = true;
             this.movRadioButton.Text = "mov";
             this.movRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // xorRadioButton
+            // 
+            this.xorRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.xorRadioButton.AutoSize = true;
+            this.xorRadioButton.Location = new System.Drawing.Point(143, 7);
+            this.xorRadioButton.Name = "xorRadioButton";
+            this.xorRadioButton.Size = new System.Drawing.Size(42, 19);
+            this.xorRadioButton.TabIndex = 6;
+            this.xorRadioButton.TabStop = true;
+            this.xorRadioButton.Text = "xor";
+            this.xorRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // addRadioButton
+            // 
+            this.addRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.addRadioButton.AutoSize = true;
+            this.addRadioButton.Location = new System.Drawing.Point(142, 36);
+            this.addRadioButton.Name = "addRadioButton";
+            this.addRadioButton.Size = new System.Drawing.Size(45, 19);
+            this.addRadioButton.TabIndex = 7;
+            this.addRadioButton.TabStop = true;
+            this.addRadioButton.Text = "add";
+            this.addRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // subRadioButton
+            // 
+            this.subRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.subRadioButton.AutoSize = true;
+            this.subRadioButton.Location = new System.Drawing.Point(142, 65);
+            this.subRadioButton.Name = "subRadioButton";
+            this.subRadioButton.Size = new System.Drawing.Size(44, 19);
+            this.subRadioButton.TabIndex = 8;
+            this.subRadioButton.TabStop = true;
+            this.subRadioButton.Text = "sub";
+            this.subRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // andRadioButton
+            // 
+            this.andRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.andRadioButton.AutoSize = true;
+            this.andRadioButton.Location = new System.Drawing.Point(10, 97);
+            this.andRadioButton.Name = "andRadioButton";
+            this.andRadioButton.Size = new System.Drawing.Size(45, 19);
+            this.andRadioButton.TabIndex = 9;
+            this.andRadioButton.TabStop = true;
+            this.andRadioButton.Text = "and";
+            this.andRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // orRadioButton
+            // 
+            this.orRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.orRadioButton.AutoSize = true;
+            this.orRadioButton.Location = new System.Drawing.Point(80, 97);
+            this.orRadioButton.Name = "orRadioButton";
+            this.orRadioButton.Size = new System.Drawing.Size(36, 19);
+            this.orRadioButton.TabIndex = 10;
+            this.orRadioButton.TabStop = true;
+            this.orRadioButton.Text = "or";
+            this.orRadioButton.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -751,53 +889,69 @@ namespace WersjaOkienkowa
             this.radioButton14.Text = "radioButton14";
             this.radioButton14.UseVisualStyleBackColor = true;
             // 
-            // incRadioButton
+            // textBox9
             // 
-            this.incRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.incRadioButton.AutoSize = true;
-            this.incRadioButton.Location = new System.Drawing.Point(128, 17);
-            this.incRadioButton.Name = "incRadioButton";
-            this.incRadioButton.Size = new System.Drawing.Size(41, 19);
-            this.incRadioButton.TabIndex = 2;
-            this.incRadioButton.TabStop = true;
-            this.incRadioButton.Text = "inc";
-            this.incRadioButton.UseVisualStyleBackColor = true;
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox9.Location = new System.Drawing.Point(131, 3);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(58, 23);
+            this.textBox9.TabIndex = 23;
             // 
-            // notRadioButton
+            // textBox10
             // 
-            this.notRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.notRadioButton.AutoSize = true;
-            this.notRadioButton.Location = new System.Drawing.Point(127, 56);
-            this.notRadioButton.Name = "notRadioButton";
-            this.notRadioButton.Size = new System.Drawing.Size(43, 19);
-            this.notRadioButton.TabIndex = 3;
-            this.notRadioButton.TabStop = true;
-            this.notRadioButton.Text = "not";
-            this.notRadioButton.UseVisualStyleBackColor = true;
+            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox10.Location = new System.Drawing.Point(131, 32);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(58, 23);
+            this.textBox10.TabIndex = 22;
             // 
-            // decRadioButton
+            // textBox11
             // 
-            this.decRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.decRadioButton.AutoSize = true;
-            this.decRadioButton.Location = new System.Drawing.Point(27, 97);
-            this.decRadioButton.Name = "decRadioButton";
-            this.decRadioButton.Size = new System.Drawing.Size(44, 19);
-            this.decRadioButton.TabIndex = 4;
-            this.decRadioButton.TabStop = true;
-            this.decRadioButton.Text = "dec";
-            this.decRadioButton.UseVisualStyleBackColor = true;
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox11.Location = new System.Drawing.Point(131, 64);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(58, 23);
+            this.textBox11.TabIndex = 21;
             // 
-            // negRadioButton
+            // textBox12
             // 
-            this.negRadioButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.negRadioButton.AutoSize = true;
-            this.negRadioButton.Location = new System.Drawing.Point(126, 97);
-            this.negRadioButton.Name = "negRadioButton";
-            this.negRadioButton.Size = new System.Drawing.Size(45, 19);
-            this.negRadioButton.TabIndex = 5;
-            this.negRadioButton.TabStop = true;
-            this.negRadioButton.Text = "neg";
-            this.negRadioButton.UseVisualStyleBackColor = true;
+            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox12.Location = new System.Drawing.Point(131, 100);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(58, 23);
+            this.textBox12.TabIndex = 20;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox13.Location = new System.Drawing.Point(131, 136);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(58, 23);
+            this.textBox13.TabIndex = 19;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox14.Location = new System.Drawing.Point(131, 172);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(58, 23);
+            this.textBox14.TabIndex = 18;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox15.Location = new System.Drawing.Point(131, 208);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(58, 23);
+            this.textBox15.TabIndex = 17;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox16.Location = new System.Drawing.Point(131, 245);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(58, 23);
+            this.textBox16.TabIndex = 16;
             // 
             // Form1
             // 
@@ -886,6 +1040,20 @@ namespace WersjaOkienkowa
         public System.Windows.Forms.RadioButton decRadioButton;
         public System.Windows.Forms.RadioButton notRadioButton;
         public System.Windows.Forms.RadioButton incRadioButton;
+        public System.Windows.Forms.RadioButton xorRadioButton;
+        public System.Windows.Forms.RadioButton addRadioButton;
+        public System.Windows.Forms.RadioButton subRadioButton;
+        public System.Windows.Forms.RadioButton andRadioButton;
+        public System.Windows.Forms.RadioButton orRadioButton;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox textBox15;
+        public System.Windows.Forms.TextBox textBox16;
+
         #endregion
     }
 }

@@ -28,6 +28,79 @@ namespace WersjaOkienkowa
             }
         }
 
+        /// <summary>
+        /// Converts number to string in binary or hexagonal format
+        /// </summary>
+        /// <param name="numberToFormat">number to be formatet</param>
+        /// <param name="binary">if format should be binary or hexagonal</param>
+        /// <returns>formatet string</returns>
+        public string FormatNumberToRegistry(int numberToFormat, bool binary = true)
+        {
+            string result;
+            if (binary)
+            {
+                result = Convert.ToString(numberToFormat, 2);
+                if (result.Length > 8)
+                {
+                    result.Substring(result.Length - 8, result.Length);
+                }
+                else if (result.Length < 8)
+                {
+                    result.PadLeft(8, '0');
+                }
+            }
+            else
+            {
+                result = Convert.ToString(numberToFormat, 16);
+                if (result.Length > 2)
+                {
+                    result.Substring(result.Length - 2, result.Length);
+                }
+                else if (result.Length < 2)
+                {
+                    result.PadLeft(2, '0');
+                }
+            }
+
+            return result;
+        }
+
+        public string FormatNumberToRegistry(string stringToFormat, bool binary = true)
+        {
+            string result = stringToFormat;
+            if (binary)
+            {
+                if (result.Length > 8)
+                {
+                    result.Substring(result.Length - 8, result.Length);
+                }
+                else if (result.Length < 8)
+                {
+                    result.PadLeft(8, '0');
+                }
+            }
+            else
+            {
+                if (result.Length > 2)
+                {
+                    result.Substring(result.Length - 2, result.Length);
+                }
+                else if (result.Length < 2)
+                {
+                    result.PadLeft(2, '0');
+                }
+            }
+
+            return result;
+        }
+
+        public string ReturnTextBoxTextAndFormat(int id, bool first = true)
+        {
+            string temp = formManager.ReturnTextBoxText(id, first);
+            string result = FormatNumberToRegistry(temp, first);
+            return result;
+        }
+
         private void SimulationButtonClick(object sender, EventArgs e)
         {
             int[] radioChecks = formManager.RetrunCheckedRadioIndexes();
@@ -35,24 +108,18 @@ namespace WersjaOkienkowa
             {
                 return;
             }
-            // TODO:
-            // AND
-            // OR
-            // XOR
-            // ADD
-            // SUB
-            // NEG - UZUPEŁNIENIE DO 2 NEGACJIA I IKREMENTACJA ?
+            // TODO: 
             // KONWERSJA NA/Z 16-WEGO
             // ZROBIĆ SPRAWOZDANIE PDF
 
             switch (radioChecks[0])
             {
                 case 0:
-                    formManager.SetTextBoxText(formManager.ReturnTextBoxText(radioChecks[1]), radioChecks[2]);
+                    formManager.SetTextBoxText(ReturnTextBoxTextAndFormat(radioChecks[1]), radioChecks[2]);
                     break;
                 case 1:
-                    string temp = formManager.ReturnTextBoxText(radioChecks[1]);
-                    formManager.SetTextBoxText(formManager.ReturnTextBoxText(radioChecks[2]), radioChecks[1]);
+                    string temp = FormatNumberToRegistry(formManager.ReturnTextBoxText(radioChecks[1]));
+                    formManager.SetTextBoxText(ReturnTextBoxTextAndFormat(radioChecks[2]), radioChecks[1]);
                     formManager.SetTextBoxText(temp, radioChecks[2]);
                     break;
                 case 2:

@@ -7,9 +7,10 @@ namespace WersjaOkienkowa
     {
         Form1 mainForm;
         TextBox[] registryTextBoxes = new TextBox[8];
+        TextBox[] registryTextBoxesHex = new TextBox[8];
         RadioButton[] registryRadioButtonesFirst = new RadioButton[8];
         RadioButton[] registryRadioButtonesSecond = new RadioButton[8];
-        RadioButton[] commandsRadioButtons = new RadioButton[6];
+        RadioButton[] commandsRadioButtons = new RadioButton[11];
 
         public FormManager(Form1 mainForm)
         {
@@ -22,6 +23,12 @@ namespace WersjaOkienkowa
             commandsRadioButtons[3] = mainForm.decRadioButton;
             commandsRadioButtons[4] = mainForm.notRadioButton;
             commandsRadioButtons[5] = mainForm.negRadioButton;
+            commandsRadioButtons[6] = mainForm.andRadioButton;
+            commandsRadioButtons[7] = mainForm.orRadioButton;
+            commandsRadioButtons[8] = mainForm.xorRadioButton;
+            commandsRadioButtons[9] = mainForm.addRadioButton;
+            commandsRadioButtons[10] = mainForm.subRadioButton;
+
 
             registryTextBoxes[0] = mainForm.textBox1;
             registryTextBoxes[1] = mainForm.textBox2;
@@ -31,6 +38,15 @@ namespace WersjaOkienkowa
             registryTextBoxes[5] = mainForm.textBox6;
             registryTextBoxes[6] = mainForm.textBox7;
             registryTextBoxes[7] = mainForm.textBox8;
+
+            registryTextBoxes[0] = mainForm.textBox9;
+            registryTextBoxes[1] = mainForm.textBox10;
+            registryTextBoxes[2] = mainForm.textBox11;
+            registryTextBoxes[3] = mainForm.textBox12;
+            registryTextBoxes[4] = mainForm.textBox13;
+            registryTextBoxes[5] = mainForm.textBox14;
+            registryTextBoxes[6] = mainForm.textBox15;
+            registryTextBoxes[7] = mainForm.textBox16;
 
             registryRadioButtonesFirst[0] = mainForm.MemoryRadioButton1;
             registryRadioButtonesFirst[1] = mainForm.MemoryRadioButton2;
@@ -52,14 +68,28 @@ namespace WersjaOkienkowa
             #endregion
         }
 
-        public void SetTextBoxText(string text, int textBoxIndex)
+        public void SetTextBoxText(string text, int textBoxIndex, bool first = true)
         {
-            registryTextBoxes[textBoxIndex].Text = text.PadLeft(8, '0');
+            if (first)
+            {
+                registryTextBoxes[textBoxIndex].Text = text.PadLeft(8, '0');
+            }
+            else
+            {
+                registryTextBoxesHex[textBoxIndex].Text = text.PadLeft(8, '0');
+            }
         }
 
-        public string ReturnTextBoxText(int id)
+        public string ReturnTextBoxText(int id, bool first = true)
         {
-            return registryTextBoxes[id].Text;
+            if (first)
+            {
+                return registryTextBoxes[id].Text;
+            }
+            else
+            {
+                return registryTextBoxesHex[id].Text;
+            }
         }
 
         public int[] RetrunCheckedRadioIndexes()
