@@ -39,14 +39,14 @@ namespace WersjaOkienkowa
             registryTextBoxes[6] = mainForm.textBox7;
             registryTextBoxes[7] = mainForm.textBox8;
 
-            registryTextBoxes[0] = mainForm.textBox9;
-            registryTextBoxes[1] = mainForm.textBox10;
-            registryTextBoxes[2] = mainForm.textBox11;
-            registryTextBoxes[3] = mainForm.textBox12;
-            registryTextBoxes[4] = mainForm.textBox13;
-            registryTextBoxes[5] = mainForm.textBox14;
-            registryTextBoxes[6] = mainForm.textBox15;
-            registryTextBoxes[7] = mainForm.textBox16;
+            registryTextBoxesHex[0] = mainForm.textBox9;
+            registryTextBoxesHex[1] = mainForm.textBox10;
+            registryTextBoxesHex[2] = mainForm.textBox11;
+            registryTextBoxesHex[3] = mainForm.textBox12;
+            registryTextBoxesHex[4] = mainForm.textBox13;
+            registryTextBoxesHex[5] = mainForm.textBox14;
+            registryTextBoxesHex[6] = mainForm.textBox15;
+            registryTextBoxesHex[7] = mainForm.textBox16;
 
             registryRadioButtonesFirst[0] = mainForm.MemoryRadioButton1;
             registryRadioButtonesFirst[1] = mainForm.MemoryRadioButton2;
@@ -76,7 +76,7 @@ namespace WersjaOkienkowa
             }
             else
             {
-                registryTextBoxesHex[textBoxIndex].Text = text.PadLeft(8, '0');
+                registryTextBoxesHex[textBoxIndex].Text = text.PadLeft(2, '0');
             }
         }
 

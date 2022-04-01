@@ -24,7 +24,8 @@ namespace WersjaOkienkowa
             for (int i = 0; i < 8; i++)
             {
                 Random random = new Random();
-                formManager.SetTextBoxText(System.Convert.ToString(random.Next(255), 2), i);
+                //formManager.SetTextBoxText(System.Convert.ToString(random.Next(255), 2), i);
+                SetBothTextBoxes(FormatNumberToRegistry(random.Next(255)), i);
             }
         }
 
@@ -36,69 +37,50 @@ namespace WersjaOkienkowa
         /// <returns>formatet string</returns>
         public string FormatNumberToRegistry(int numberToFormat, bool binary = true)
         {
-            string result;
-            if (binary)
-            {
-                result = Convert.ToString(numberToFormat, 2);
-                if (result.Length > 8)
-                {
-                    result.Substring(result.Length - 8, result.Length);
-                }
-                else if (result.Length < 8)
-                {
-                    result.PadLeft(8, '0');
-                }
-            }
-            else
-            {
-                result = Convert.ToString(numberToFormat, 16);
-                if (result.Length > 2)
-                {
-                    result.Substring(result.Length - 2, result.Length);
-                }
-                else if (result.Length < 2)
-                {
-                    result.PadLeft(2, '0');
-                }
-            }
-
-            return result;
+            string stringToFormat = binary ? Convert.ToString(numberToFormat, 2) : Convert.ToString(numberToFormat, 16);
+            return FormatNumberToRegistry(stringToFormat, binary);
         }
 
         public string FormatNumberToRegistry(string stringToFormat, bool binary = true)
         {
             string result = stringToFormat;
+
             if (binary)
             {
-                if (result.Length > 8)
-                {
-                    result.Substring(result.Length - 8, result.Length);
-                }
-                else if (result.Length < 8)
-                {
-                    result.PadLeft(8, '0');
-                }
+                int diffrance = result.Length - 8;
+                if (diffrance < 0)
+                    diffrance = 0;
+                result = result.Substring(diffrance, result.Length - diffrance);
             }
             else
             {
-                if (result.Length > 2)
-                {
-                    result.Substring(result.Length - 2, result.Length);
-                }
-                else if (result.Length < 2)
-                {
-                    result.PadLeft(2, '0');
-                }
+                int diffrance = result.Length - 2;
+                if (diffrance < 0)
+                    diffrance = 0;
+                result = result.Substring(diffrance, result.Length - diffrance);
             }
+
+            //result = binary ? result.Substring(result.Length - 8) : result.Substring(result.Length - 2);
 
             return result;
         }
 
-        public string ReturnTextBoxTextAndFormat(int id, bool first = true)
+        public string ReturnTextBoxTextAndFormat(int id, bool binary = true)
         {
-            string temp = formManager.ReturnTextBoxText(id, first);
-            string result = FormatNumberToRegistry(temp, first);
+            string temp = formManager.ReturnTextBoxText(id, binary);
+            string result = FormatNumberToRegistry(temp, binary);
             return result;
+        }
+
+        public void SetBothTextBoxes(string value, int idOfTextBox)
+        {
+            int intValue = Convert.ToInt32(value, 2);
+            SetBothTextBoxes(intValue, idOfTextBox);
+        }
+        public void SetBothTextBoxes(int value, int idOfTextBox)
+        {
+            formManager.SetTextBoxText(FormatNumberToRegistry(Convert.ToString(value, 2)), idOfTextBox);
+            formManager.SetTextBoxText(FormatNumberToRegistry(Convert.ToString(value, 16), false), idOfTextBox, false);
         }
 
         private void SimulationButtonClick(object sender, EventArgs e)
@@ -114,95 +96,75 @@ namespace WersjaOkienkowa
 
             switch (radioChecks[0])
             {
-                case 0:
-                    formManager.SetTextBoxText(ReturnTextBoxTextAndFormat(radioChecks[1]), radioChecks[2]);
+                case 0: // MOV
+                    SetBothTextBoxes(ReturnTextBoxTextAndFormat(radioChecks[1]), radioChecks[2]);
                     break;
-                case 1:
-                    string temp = FormatNumberToRegistry(formManager.ReturnTextBoxText(radioChecks[1]));
+                case 1: // XCHGL
+                    string temp = FormatNumberToRegistry(ReturnTextBoxTextAndFormat(radioChecks[1]));
                     formManager.SetTextBoxText(ReturnTextBoxTextAndFormat(radioChecks[2]), radioChecks[1]);
                     formManager.SetTextBoxText(temp, radioChecks[2]);
                     break;
-                case 2:
-                    int value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                case 2: // INC
+                    int value = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
                     value++;
-                    if (value > 255)
-                    {
-                        value = 0;
-                    }
-                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    SetBothTextBoxes(value, radioChecks[1]);
                     break;
-                case 3:
-                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                case 3: // DEC
+                    value = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
                     value--;
-                    if (value < 0)
-                    {
-                        value = 255;
-                    }
-                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    SetBothTextBoxes(value, radioChecks[1]);
                     break;
-                case 4:
-                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                case 4: // NOT
+                    value = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
                     value = Math.Abs(value - 255);
-                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    SetBothTextBoxes(value, radioChecks[1]);
                     break;
-                case 5:
-                    value = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
+                case 5: // NEG
+                    value = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
                     value = Math.Abs(value - 255);
                     if (value % 2 != 0)
-                    {
                         value++;
-                    }
-                    if (value > 255)
-                    {
-                        value = 0;
-                    }
-                    formManager.SetTextBoxText(Convert.ToString(value, 2), radioChecks[1]);
+                    SetBothTextBoxes(value, radioChecks[1]);
                     break;
-                case 6:
-                    //AND
-                    byte byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
-                    byte byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
-                    formManager.SetTextBoxText(Convert.ToString(byteValue1 & byteValue2, 2), radioChecks[1]);
+                case 6:  // AND
+                    byte byteValue1 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
+                    byte byteValue2 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[2]), 2);
+                    SetBothTextBoxes(Convert.ToString(byteValue1 & byteValue2, 2), radioChecks[1]);
                     break;
-                case 7:
-                    //OR
-                    byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
-                    byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
-                    formManager.SetTextBoxText(Convert.ToString(byteValue1 | byteValue2, 2), radioChecks[1]);
+                case 7:  // OR
+                    byteValue1 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
+                    byteValue2 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[2]), 2);
+                    SetBothTextBoxes(Convert.ToString(byteValue1 | byteValue2, 2), radioChecks[1]);
                     break;
-                case 8:
-                    //XOR
-                    byteValue1 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[1]), 2);
-                    byteValue2 = Convert.ToByte(formManager.ReturnTextBoxText(radioChecks[2]), 2);
-                    formManager.SetTextBoxText(Convert.ToString(byteValue1 ^ byteValue2, 2), radioChecks[1]);
+                case 8:  // XOR
+                    byteValue1 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
+                    byteValue2 = Convert.ToByte(ReturnTextBoxTextAndFormat(radioChecks[2]), 2);
+                    SetBothTextBoxes(Convert.ToString(byteValue1 ^ byteValue2, 2), radioChecks[1]);
                     break;
-                case 9:
-                    //ADD
-                    int value1 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
-                    int value2 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                case 9:  // ADD
+                    int value1 = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
+                    int value2 = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[2]), 2);
                     int valueToSet = value1 + value2;
-                    if (valueToSet > 255)
-                    {
-                        valueToSet -= 255;
-                    }
-                    formManager.SetTextBoxText(Convert.ToString(valueToSet, 2), radioChecks[1]);
+                    SetBothTextBoxes(Convert.ToString(valueToSet, 2), radioChecks[1]);
                     break;
-                case 10:
-                    //SUB
-                    value1 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[1]), 2);
-                    value2 = Convert.ToInt32(formManager.ReturnTextBoxText(radioChecks[2]), 2);
+                case 10: // SUB
+                    value1 = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[1]), 2);
+                    value2 = Convert.ToInt32(ReturnTextBoxTextAndFormat(radioChecks[2]), 2);
                     valueToSet = value1 - value2;
-                    if (valueToSet < 0)
-                    {
-                        valueToSet += 255;
-                    }
-                    formManager.SetTextBoxText(Convert.ToString(valueToSet, 2), radioChecks[1]);
+                    SetBothTextBoxes(Convert.ToString(valueToSet, 2), radioChecks[1]);
                     break;
 
                 default:
                     break;
             }
 
+        }
+        private void UnsellectEvent(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                SetBothTextBoxes(ReturnTextBoxTextAndFormat(i), i);
+            }
         }
     }
 }
