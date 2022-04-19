@@ -74,6 +74,12 @@ namespace WersjaOkienkowa
 
         public void SetBothTextBoxes(string value, int idOfTextBox)
         {
+            // Checking if value is valid binary
+            foreach (char c in value)
+            {
+                if (c != '0' && c != '1')
+                    return;
+            }
             int intValue = Convert.ToInt32(value, 2);
             SetBothTextBoxes(intValue, idOfTextBox);
         }
